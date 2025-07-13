@@ -12,8 +12,10 @@ public class Calcium implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
 		ModItems.initialize();
 		LOGGER.info("Calcium initialized.");
+
 	}
 
 }

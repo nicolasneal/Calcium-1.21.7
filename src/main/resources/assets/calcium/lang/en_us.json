@@ -1,4 +1,16 @@
 {
   "item.calcium.hide": "Hide",
-  "item.calcium.fur": "Fur"
+  "item.calcium.fur": "Fur",
+  "item.calcium.bear": "Bear",
+  "item.calcium.cooked_bear": "Cooked Bear",
+  "item.calcium.squid": "Squid",
+  "item.calcium.calamari": "Calamari",
+  "item.calcium.frog": "Frog",
+  "item.calcium.cooked_frog": "Cooked Frog",
+  "item.calcium.cheval": "Cheval",
+  "item.calcium.cooked_cheval": "Cooked Cheval",
+  "item.calcium.camel": "Camel",
+  "item.calcium.cooked_camel": "Cooked Camel",
+  "item.calcium.chevon": "Chevon",
+  "item.calcium.cooked_chevon": "Cooked Chevon"
 }
