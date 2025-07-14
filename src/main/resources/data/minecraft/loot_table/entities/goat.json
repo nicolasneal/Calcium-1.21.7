@@ -18,7 +18,8 @@
               }
             },
             {
-              "function": "minecraft:enchant_with_looting",
+              "function": "minecraft:enchanted_count_increase",
+              "enchantment": "minecraft:looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
@@ -46,7 +47,8 @@
               }
             },
             {
-              "function": "minecraft:enchant_with_looting",
+              "function": "minecraft:enchanted_count_increase",
+              "enchantment": "minecraft:looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
@@ -74,7 +76,8 @@
               }
             },
             {
-              "function": "minecraft:enchant_with_looting",
+              "function": "minecraft:enchanted_count_increase",
+              "enchantment": "minecraft:looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
@@ -102,7 +105,8 @@
               }
             },
             {
-              "function": "minecraft:enchant_with_looting",
+              "function": "minecraft:enchanted_count_increase",
+              "enchantment": "minecraft:looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
@@ -113,5 +117,6 @@
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "minecraft:entities/goat"
 }

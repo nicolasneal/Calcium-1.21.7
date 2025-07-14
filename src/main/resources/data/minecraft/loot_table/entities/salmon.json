@@ -71,10 +71,6 @@
               },
               "enchantment": "minecraft:looting",
               "function": "minecraft:enchanted_count_increase"
-            },
-            {
-              "function": "minecraft:limit_count",
-              "limit": 2
             }
           ],
           "name": "minecraft:bone"

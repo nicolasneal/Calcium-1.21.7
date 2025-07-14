@@ -33,10 +33,6 @@
                 "min": 0.0,
                 "max": 1.0
               }
-            },
-            {
-              "function": "minecraft:limit_count",
-              "limit": 2
             }
           ],
           "name": "minecraft:bone"
