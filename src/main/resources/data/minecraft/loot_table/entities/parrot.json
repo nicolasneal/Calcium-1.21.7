@@ -2,35 +2,64 @@
   "type": "minecraft:entity",
   "pools": [
     {
+      "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "minecraft:feather",
           "functions": [
             {
-              "add": false,
+              "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "max": 2.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
+                "min": 1.0,
+                "max": 2.0
+              }
             },
             {
+              "function": "minecraft:enchant_with_looting",
               "count": {
                 "type": "minecraft:uniform",
-                "max": 1.0,
-                "min": 0.0
-              },
-              "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+                "min": 0.0,
+                "max": 1.0
+              }
             }
-          ],
-          "name": "minecraft:feather"
+          ]
         }
-      ],
-      "rolls": 1.0
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bone",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              }
+            },
+            {
+              "function": "minecraft:enchant_with_looting",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              }
+            },
+            {
+              "function": "minecraft:limit_count",
+              "limit": 2
+            }
+          ]
+        }
+      ]
     }
-  ],
-  "random_sequence": "minecraft:entities/parrot"
+  ]
 }

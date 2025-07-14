@@ -17,20 +17,21 @@ public class ModItems {
     // INGREDIENTS
     public static final Item HIDE = register("hide", Item::new, new Item.Settings().maxCount(64));
     public static final Item FUR = register("fur", Item::new, new Item.Settings().maxCount(64));
+    public static final Item PIXIE_DUST = register("pixie_dust", Item::new, new Item.Settings().maxCount(64));
 
     // FOOD AND DRINK
-    public static final Item BEAR = register("bear", Item::new, new Item.Settings().maxCount(64));
-    public static final Item COOKED_BEAR = register("cooked_bear", Item::new, new Item.Settings().maxCount(64));
-    public static final Item SQUID = register("squid", Item::new, new Item.Settings().maxCount(64));
-    public static final Item CALAMARI = register("calamari", Item::new, new Item.Settings().maxCount(64));
-    public static final Item FROG = register("frog", Item::new, new Item.Settings().maxCount(64));
-    public static final Item COOKED_FROG = register("cooked_frog", Item::new, new Item.Settings().maxCount(64));
-    public static final Item CHEVAL = register("cheval", Item::new, new Item.Settings().maxCount(64));
-    public static final Item COOKED_CHEVAL = register("cooked_cheval", Item::new, new Item.Settings().maxCount(64));
-    public static final Item CHEVON = register("chevon", Item::new, new Item.Settings().maxCount(64));
-    public static final Item COOKED_CHEVON = register("cooked_chevon", Item::new, new Item.Settings().maxCount(64));
-    public static final Item CAMEL = register("camel", Item::new, new Item.Settings().maxCount(64));
-    public static final Item COOKED_CAMEL = register("cooked_camel", Item::new, new Item.Settings().maxCount(64));
+    public static final Item BEAR = register("bear", Item::new, new Item.Settings().maxCount(64).food(ModFoods.BEAR));
+    public static final Item COOKED_BEAR = register("cooked_bear", Item::new, new Item.Settings().maxCount(64).food(ModFoods.COOKED_BEAR));
+    public static final Item SQUID = register("squid", Item::new, new Item.Settings().maxCount(64).food(ModFoods.SQUID));
+    public static final Item CALAMARI = register("calamari", Item::new, new Item.Settings().maxCount(64).food(ModFoods.CALAMARI));
+    public static final Item FROG = register("frog", Item::new, new Item.Settings().maxCount(64).food(ModFoods.FROG));
+    public static final Item COOKED_FROG = register("cooked_frog", Item::new, new Item.Settings().maxCount(64).food(ModFoods.COOKED_FROG));
+    public static final Item CHEVAL = register("cheval", Item::new, new Item.Settings().maxCount(64).food(ModFoods.CHEVAL));
+    public static final Item COOKED_CHEVAL = register("cooked_cheval", Item::new, new Item.Settings().maxCount(64).food(ModFoods.COOKED_CHEVAL));
+    public static final Item CHEVON = register("chevon", Item::new, new Item.Settings().maxCount(64).food(ModFoods.CHEVON));
+    public static final Item COOKED_CHEVON = register("cooked_chevon", Item::new, new Item.Settings().maxCount(64).food(ModFoods.COOKED_CHEVON));
+    public static final Item CAMEL = register("camel", Item::new, new Item.Settings().maxCount(64).food(ModFoods.CAMEL));
+    public static final Item COOKED_CAMEL = register("cooked_camel", Item::new, new Item.Settings().maxCount(64).food(ModFoods.COOKED_CAMEL));
 
     private static <T extends Item> T register(String name, Function<Item.Settings, T> constructor, Item.Settings settings) {
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name));
@@ -43,6 +44,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register((itemgroup) -> {
             itemgroup.add(HIDE);
             itemgroup.add(FUR);
+            itemgroup.add(PIXIE_DUST);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(itemgroup -> {
