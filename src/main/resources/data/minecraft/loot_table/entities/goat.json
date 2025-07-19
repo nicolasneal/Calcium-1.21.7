@@ -2,8 +2,7 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
@@ -18,8 +17,7 @@
               }
             },
             {
-              "function": "minecraft:enchanted_count_increase",
-              "enchantment": "minecraft:looting",
+              "function": "minecraft:enchant_with_looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
@@ -31,12 +29,11 @@
       ]
     },
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "calcium:hide",
+          "name": "minecraft:leather",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -47,8 +44,7 @@
               }
             },
             {
-              "function": "minecraft:enchanted_count_increase",
-              "enchantment": "minecraft:looting",
+              "function": "minecraft:enchant_with_looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
@@ -60,14 +56,49 @@
       ]
     },
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
           "name": "calcium:chevon",
           "functions": [
             {
+              "function": "minecraft:furnace_smelt",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "this",
+                      "predicate": {
+                        "flags": {
+                          "is_on_fire": true
+                        }
+                      }
+                    },
+                    {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "direct_attacker",
+                      "predicate": {
+                        "equipment": {
+                          "mainhand": {
+                            "predicates": {
+                              "minecraft:enchantments": [
+                                {
+                                  "enchantments": "#minecraft:smelts_loot"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
@@ -76,8 +107,7 @@
               }
             },
             {
-              "function": "minecraft:enchanted_count_increase",
-              "enchantment": "minecraft:looting",
+              "function": "minecraft:enchant_with_looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
@@ -89,8 +119,7 @@
       ]
     },
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
@@ -105,8 +134,7 @@
               }
             },
             {
-              "function": "minecraft:enchanted_count_increase",
-              "enchantment": "minecraft:looting",
+              "function": "minecraft:enchant_with_looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,

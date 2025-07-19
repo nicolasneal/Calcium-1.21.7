@@ -12,6 +12,7 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 public class ModItems {
+
     public static final String MOD_ID = "calcium";
 
     // INGREDIENTS
