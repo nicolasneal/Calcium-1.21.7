@@ -24,10 +24,18 @@ public class ModBlocks {
     public static final String MOD_ID = "calcium";
 
     // CUBE BLOCKS
+    public static final Block POLISHED_STONE = register("polished_stone", Block::new, Block.Settings.create().mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F), true);
     public static final Block ANDESITE_BRICKS = register("andesite_bricks", Block::new, Block.Settings.create().mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F), true);
+    public static final Block CHISELED_ANDESITE = register("chiseled_andesite", Block::new, Block.Settings.create().mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F), true);
+    public static final Block DIORITE_BRICKS = register("diorite_bricks", Block::new, Block.Settings.create().mapColor(MapColor.OFF_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F), true);
+    public static final Block CHISELED_DIORITE = register("chiseled_diorite", Block::new, Block.Settings.create().mapColor(MapColor.OFF_WHITE).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F), true);
+    public static final Block GRANITE_BRICKS = register("granite_bricks", Block::new, Block.Settings.create().mapColor(MapColor.DIRT_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F), true);
+    public static final Block CHISELED_GRANITE = register("chiseled_granite", Block::new, Block.Settings.create().mapColor(MapColor.DIRT_BROWN).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F), true);
+    public static final Block POLISHED_DRIPSTONE = register("polished_dripstone", Block::new, Block.Settings.create().mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sounds(BlockSoundGroup.DRIPSTONE_BLOCK).requiresTool().strength(1.5F, 1.0F), true);
+    public static final Block CHISELED_DRIPSTONE = register("chiseled_dripstone", Block::new, Block.Settings.create().mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASEDRUM).sounds(BlockSoundGroup.DRIPSTONE_BLOCK).requiresTool().strength(1.5F, 1.0F), true);
 
     // PLANT BLOCKS
-    public static final Block ENDER_GROWTH = register("ender_growth", EndPlantBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).replaceable().noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XYZ).burnable().pistonBehavior(PistonBehavior.DESTROY), true);
+    public static final Block ENDER_GROWTH = register("ender_growth", EndPlantBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).replaceable().noCollision().breakInstantly().sounds(BlockSoundGroup.ROOTS).offset(AbstractBlock.OffsetType.XYZ).burnable().pistonBehavior(PistonBehavior.DESTROY), true);
 
     public static void initialize() {
 
@@ -36,7 +44,15 @@ public class ModBlocks {
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register((itemgroup) -> {
+            itemgroup.add(POLISHED_STONE);
             itemgroup.add(ANDESITE_BRICKS);
+            itemgroup.add(CHISELED_ANDESITE);
+            itemgroup.add(DIORITE_BRICKS);
+            itemgroup.add(CHISELED_DIORITE);
+            itemgroup.add(GRANITE_BRICKS);
+            itemgroup.add(CHISELED_GRANITE);
+            itemgroup.add(POLISHED_DRIPSTONE);
+            itemgroup.add(CHISELED_DRIPSTONE);
         });
 
     }
@@ -48,7 +64,7 @@ public class ModBlocks {
 
         if (registerItem) {
             RegistryKey<Item> itemKey = keyOfItem(name);
-            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
+            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey).useBlockPrefixedTranslationKey());
             Registry.register(Registries.ITEM, itemKey, blockItem);
         }
 
