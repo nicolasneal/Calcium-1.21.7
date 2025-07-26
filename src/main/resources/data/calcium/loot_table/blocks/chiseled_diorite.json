@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "chiseled_diorite:andesite"
+          "name": "chiseled_diorite:chiseled_diorite"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "chiseled_diorite:blocks/andesite"
+  "random_sequence": "chiseled_diorite:blocks/chiseled_diorite"
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:oak_log"
+  ],
+  "result": {
+    "id": "minecraft:oak_wood",
+    "count": 1
+  }
+}

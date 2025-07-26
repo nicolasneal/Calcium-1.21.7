@@ -1,0 +1,16 @@
+{
+    "pack": {
+        "pack_format": 81,
+    	   "supported_formats": {
+	        "min_inclusive": 16,
+	        "max_inclusive": 256
+	    },
+        "description": [{"text":"Calcium's Vanilla Overwrite","color":"#8DBCE3"},{"text":"\n✿ ɴɪᴄᴏʟᴀꜱ ✿","color":"#cca3ff"}]
+    },
+    "filter": {
+        "block": [{
+            "namespace": "minecraft",
+            "path": "recipe/"
+        }]
+    }
+}

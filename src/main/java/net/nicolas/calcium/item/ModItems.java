@@ -15,12 +15,17 @@ public class ModItems {
 
     public static final String MOD_ID = "calcium";
 
-    // INGREDIENTS
+    // INGREDIENTS (MOB DROPS)
     public static final Item HIDE = register("hide", Item::new, new Item.Settings().maxCount(64));
     public static final Item FUR = register("fur", Item::new, new Item.Settings().maxCount(64));
     public static final Item PIXIE_DUST = register("pixie_dust", Item::new, new Item.Settings().maxCount(64));
+    // INGREDIENTS (RESOURCES)
+    public static final Item OAK_TIMBER = register("oak_timber", Item::new, new Item.Settings().maxCount(64));
+    public static final Item OAK_PLANK = register("oak_plank", Item::new, new Item.Settings().maxCount(64));
+    public static final Item WOODEN_ROD = register("wooden_rod", Item::new, new Item.Settings().maxCount(64));
+    public static final Item STONE = register("stone", Item::new, new Item.Settings().maxCount(64));
 
-    // FOOD AND DRINK
+    // FOOD AND DRINK (MOB DROPS)
     public static final Item BEAR = register("bear", Item::new, new Item.Settings().maxCount(64).food(ModFoods.BEAR));
     public static final Item COOKED_BEAR = register("cooked_bear", Item::new, new Item.Settings().maxCount(64).food(ModFoods.COOKED_BEAR));
     public static final Item SQUID = register("squid", Item::new, new Item.Settings().maxCount(64).food(ModFoods.SQUID));
@@ -46,6 +51,10 @@ public class ModItems {
             itemgroup.add(HIDE);
             itemgroup.add(FUR);
             itemgroup.add(PIXIE_DUST);
+            itemgroup.add(OAK_TIMBER);
+            itemgroup.add(OAK_PLANK);
+            itemgroup.add(WOODEN_ROD);
+            itemgroup.add(STONE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(itemgroup -> {

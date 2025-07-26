@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "#calcium:timber",
+    "@": "calcium:wooden_rod"
+  },
+  "pattern": [
+    "###",
+    " @ ",
+    " @ "
+  ],
+  "result": {
+    "id": "minecraft:wooden_pickaxe",
+    "count": 1
+  }
+}

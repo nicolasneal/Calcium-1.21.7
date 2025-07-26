@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "#calcium:timber",
+    "@": "minecraft:stick"
+  },
+  "pattern": [
+    "@@",
+    "##"
+  ],
+  "result": {
+    "id": "minecraft:campfire",
+    "count": 1
+  }
+}

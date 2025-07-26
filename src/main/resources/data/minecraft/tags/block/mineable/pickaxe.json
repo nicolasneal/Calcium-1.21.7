@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "calcium:polished_stone",
+    "calcium:andesite_bricks",
+    "calcium:chiseled_andesite",
+    "calcium:granite_bricks",
+    "calcium:chiseled_granite",
+    "calcium:diorite_bricks",
+    "calcium:chiseled_diorite",
+    "calcium:polished_dripstone",
+    "calcium:chiseled_dripstone"
+  ]
+}
