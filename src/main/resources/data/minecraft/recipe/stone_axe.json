@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": "#calcium:timber",
+    "#": "calcium:stone",
     "@": "calcium:wooden_rod"
   },
   "pattern": [
-    "###",
-    " @ ",
-    " @ "
+    "##",
+    "@#",
+    "@ "
   ],
   "result": {
-    "id": "minecraft:wooden_pickaxe",
+    "id": "minecraft:stone_axe",
     "count": 1
   }
 }

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "calcium:block/wooden_pressure_plate_unpowered"
+    },
+    "powered=true": {
+      "model": "calcium:block/wooden_pressure_plate_powered"
+    }
+  }
+}

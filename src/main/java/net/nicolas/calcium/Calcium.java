@@ -17,6 +17,7 @@ public class Calcium implements ModInitializer {
 
 		ModItems.initialize();
 		ModBlocks.initialize();
+
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
 			builder.add(ModItems.PIXIE_DUST, 2400);
 			builder.add(ModItems.OAK_TIMBER, 300);
