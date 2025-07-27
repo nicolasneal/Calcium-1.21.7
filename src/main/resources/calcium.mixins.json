@@ -3,7 +3,8 @@
 	"package": "net.nicolas.calcium.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"CampfireBlockMixin"
+		"CampfireBlockMixin",
+		"CampfirePlacementMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

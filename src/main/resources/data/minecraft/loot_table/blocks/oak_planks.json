@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "minecraft:stone",
+              "name": "minecraft:oak_planks",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -31,15 +31,11 @@
             },
             {
               "type": "minecraft:item",
-              "name": "calcium:stone",
+              "name": "calcium:oak_plank",
               "functions": [
                 {
                   "function": "minecraft:set_count",
-                  "count": {
-                    "type": "minecraft:uniform",
-                    "min": 3.0,
-                    "max": 4.0
-                  }
+                  "count": 4
                 },
                 { "function": "minecraft:explosion_decay" }
               ]
@@ -49,5 +45,5 @@
       ]
     }
   ],
-  "random_sequence": "minecraft:blocks/stone"
+  "random_sequence": "minecraft:blocks/oak_planks"
 }
