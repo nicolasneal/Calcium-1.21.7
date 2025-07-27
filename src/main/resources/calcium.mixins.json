@@ -3,9 +3,10 @@
 	"package": "net.nicolas.calcium.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-
+		"CampfireBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	}
+	},
+	"refmap": "calcium.refmap.json"
 }

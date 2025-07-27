@@ -7,8 +7,8 @@
   },
   "pattern": [
     "##",
-    "@ ",
-    "@ "
+    " @",
+    " @"
   ],
   "result": {
     "id": "minecraft:wooden_hoe",
