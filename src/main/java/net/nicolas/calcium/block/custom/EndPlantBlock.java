@@ -7,6 +7,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.block.Blocks;
 
 public class EndPlantBlock extends ShortPlantBlock {
+
     public EndPlantBlock(Settings settings) {
         super(settings);
     }
