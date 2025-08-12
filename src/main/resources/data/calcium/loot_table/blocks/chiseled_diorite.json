@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "chiseled_diorite:chiseled_diorite"
+          "name": "calcium:chiseled_diorite"
         }
       ],
       "rolls": 1.0

@@ -24,6 +24,8 @@ public class ModItems {
     public static final Item OAK_PLANK = register("oak_plank", Item::new, new Item.Settings().maxCount(64));
     public static final Item WOODEN_ROD = register("wooden_rod", Item::new, new Item.Settings().maxCount(64));
     public static final Item STONE = register("stone", Item::new, new Item.Settings().maxCount(64));
+    // INGREDIENTS (UTILITY)
+    public static final Item ENCHANTING_TABLET = register("enchanting_tablet", Item::new, new Item.Settings().maxCount(64));
 
     // FOOD AND DRINK (MOB DROPS)
     public static final Item BEAR = register("bear", Item::new, new Item.Settings().maxCount(64).food(ModFoods.BEAR));
@@ -55,6 +57,7 @@ public class ModItems {
             itemgroup.add(OAK_PLANK);
             itemgroup.add(WOODEN_ROD);
             itemgroup.add(STONE);
+            itemgroup.add(ENCHANTING_TABLET);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(itemgroup -> {

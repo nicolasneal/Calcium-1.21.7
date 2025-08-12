@@ -1,4 +1,8 @@
 {
+
+  "tooltip.calcium.enchanting_table_tablet": "Add Enchanting Tablet",
+  "tooltip.calcium.enchanting_table_fuel": "Add Lapis Lazuli",
+
   "block.calcium.andesite_bricks": "Andesite Bricks",
   "block.calcium.chiseled_andesite": "Chiseled Andesite",
   "block.calcium.chiseled_diorite": "Chiseled Diorite",
@@ -11,6 +15,7 @@
   "block.calcium.polished_stone": "Polished Stone",
   "block.calcium.wooden_pressure_plate": "Wooden Pressure Plate",
   "block.calcium.stone_pressure_plate": "Stone Pressure Plate",
+
   "item.calcium.oak_timber": "Oak Timber",
   "item.calcium.oak_plank": "Oak Plank",
   "item.calcium.wooden_rod": "Wooden Rod",
@@ -29,5 +34,7 @@
   "item.calcium.fur": "Fur",
   "item.calcium.hide": "Hide",
   "item.calcium.pixie_dust": "Pixie Dust",
-  "item.calcium.squid": "Squid"
+  "item.calcium.squid": "Squid",
+  "item.calcium.enchanting_tablet": "Enchanting Tablet"
+
 }

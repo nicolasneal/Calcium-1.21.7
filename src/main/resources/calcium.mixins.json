@@ -1,13 +1,14 @@
 {
-	"required": true,
-	"package": "net.nicolas.calcium.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"CampfireMixin",
-		"BedMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"refmap": "calcium.refmap.json"
+  "required": true,
+  "package": "net.nicolas.calcium.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BedMixin",
+    "CampfireMixin",
+    "EnchantingTableMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "calcium.refmap.json"
 }

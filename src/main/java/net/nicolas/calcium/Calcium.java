@@ -5,9 +5,16 @@ import net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
+import net.minecraft.resource.featuretoggle.FeatureSet;
+import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.util.Identifier;
 import net.nicolas.calcium.block.ModBlocks;
 import net.nicolas.calcium.event.Cracking;
 import net.nicolas.calcium.item.ModItems;
+import net.nicolas.calcium.screen.EnchantingScreenHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,8 +23,12 @@ public class Calcium implements ModInitializer {
 	public static final String MOD_ID = "calcium";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	@Override
-	public void onInitialize() {
+	// Registering Screens
+	public static final ScreenHandlerType<EnchantingScreenHandler> ENCHANTING_SCREEN_HANDLER =
+			Registry.register(Registries.SCREEN_HANDLER, Identifier.of("calcium", "enchanting_screen"),
+					new ScreenHandlerType<>(EnchantingScreenHandler::new, FeatureSet.of(FeatureFlags.VANILLA)));
+
+	@Override public void onInitialize() {
 
 		// Custom Class Initialization
 		ModItems.initialize();

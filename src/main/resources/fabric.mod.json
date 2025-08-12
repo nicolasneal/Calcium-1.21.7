@@ -23,9 +23,6 @@
 		"main": [
 			"net.nicolas.calcium.Calcium"
 		],
-		"fabric-datagen": [
-			"net.nicolas.calcium.CalciumDataGenerator"
-		],
 		"client": [
 			"net.nicolas.calcium.CalciumClient"
 		]
