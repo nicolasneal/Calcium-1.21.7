@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "calcium:block/slabs/andesite_bricks_top"
+    },
+    "type=bottom": {
+      "model": "calcium:block/slabs/andesite_bricks_bottom"
+    },
+    "type=double": {
+      "model": "calcium:block/slabs/andesite_bricks_double"
+    }
+  }
+}

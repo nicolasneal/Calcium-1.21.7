@@ -5,10 +5,15 @@
   "mixins": [
     "BedMixin",
     "CampfireMixin",
-    "EnchantingTableMixin"
+    "EnchantingTableMixin",
+    "SignMixin",
+    "SignUseMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
-  "refmap": "calcium.refmap.json"
+  "refmap": "calcium.refmap.json",
+  "client": [
+    "SignMixin"
+  ]
 }

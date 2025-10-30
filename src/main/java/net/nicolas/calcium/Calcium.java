@@ -150,6 +150,10 @@ public class Calcium implements ModInitializer {
 			context.modify(Items.LINGERING_POTION, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));
 			context.modify(Items.HONEY_BOTTLE, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));
 			context.modify(Items.CAKE, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));
+			context.modify(Items.MUSHROOM_STEW, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));
+			context.modify(Items.BEETROOT_SOUP, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));
+			context.modify(Items.RABBIT_STEW, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));
+			context.modify(Items.SUSPICIOUS_STEW, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));
 			context.modify(Items.ARMOR_STAND, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));
 			context.modify(Items.WRITTEN_BOOK, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));
 			context.modify(Items.ENCHANTED_BOOK, builder -> builder.add(DataComponentTypes.MAX_STACK_SIZE, 64));

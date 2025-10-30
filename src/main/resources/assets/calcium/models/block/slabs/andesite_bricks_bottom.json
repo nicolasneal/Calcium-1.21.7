@@ -1,0 +1,7 @@
+{
+  "parent": "calcium:block/slabs/slab_bottom",
+  "textures": {
+    "end": "calcium:block/andesite_bricks",
+    "side": "calcium:block/slabs/andesite_bricks"
+  }
+}

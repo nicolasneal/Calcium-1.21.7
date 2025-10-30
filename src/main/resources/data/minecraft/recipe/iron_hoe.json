@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:iron_ingot",
+    "@": "calcium:wooden_rod"
+  },
+  "pattern": [
+    "##",
+    " @",
+    " @"
+  ],
+  "result": {
+    "id": "minecraft:iron_shovel",
+    "count": 1
+  }
+}

@@ -5,7 +5,6 @@ import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.nicolas.calcium.Calcium;
 
 public class ModRecipes {
 
@@ -24,7 +23,4 @@ public class ModRecipes {
             }
     );
 
-    public static void registerRecipes() {
-        Calcium.LOGGER.info("Registering Custom Recipes for calcium");
-    }
 }

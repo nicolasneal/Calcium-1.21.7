@@ -12,26 +12,25 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-public record EnchantingRecipe(Ingredient inputItem, ItemStack output) implements Recipe<EnchantingRecipeInput> {
+public record EnchantingRecipe(Ingredient tablet, ItemStack result) implements Recipe<EnchantingRecipeInput> {
 
     public DefaultedList<Ingredient> getIngredients() {
         DefaultedList<Ingredient> list = DefaultedList.of();
-        list.add(this.inputItem);
+        list.add(this.tablet);
         return list;
     }
 
     @Override
     public boolean matches(EnchantingRecipeInput input, World world) {
-        if(world.isClient()) {
+        if (world.isClient()) {
             return false;
         }
-
-        return inputItem.test(input.getStackInSlot(0));
+        return tablet.test(input.getStackInSlot(0));
     }
 
     @Override
     public ItemStack craft(EnchantingRecipeInput input, RegistryWrapper.WrapperLookup lookup) {
-        return output.copy();
+        return result.copy();
     }
 
     @Override
@@ -46,7 +45,7 @@ public record EnchantingRecipe(Ingredient inputItem, ItemStack output) implement
 
     @Override
     public IngredientPlacement getIngredientPlacement() {
-        return IngredientPlacement.forSingleSlot(inputItem);
+        return IngredientPlacement.forSingleSlot(tablet);
     }
 
     @Override
@@ -56,15 +55,15 @@ public record EnchantingRecipe(Ingredient inputItem, ItemStack output) implement
 
     public static class Serializer implements RecipeSerializer<EnchantingRecipe> {
         public static final MapCodec<EnchantingRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-            Ingredient.CODEC.fieldOf("ingredient").forGetter(EnchantingRecipe::inputItem),
-            ItemStack.CODEC.fieldOf("result").forGetter(EnchantingRecipe::output)
+                Ingredient.CODEC.fieldOf("tablet").forGetter(EnchantingRecipe::tablet),
+                ItemStack.CODEC.fieldOf("result").forGetter(EnchantingRecipe::result)
         ).apply(inst, EnchantingRecipe::new));
 
-        public static final PacketCodec<RegistryByteBuf, EnchantingRecipe> STREAM_CODEC =
-            PacketCodec.tuple(
-                Ingredient.PACKET_CODEC, EnchantingRecipe::inputItem,
-                ItemStack.PACKET_CODEC, EnchantingRecipe::output,
-                EnchantingRecipe::new);
+        public static final PacketCodec<RegistryByteBuf, EnchantingRecipe> PACKET_CODEC = PacketCodec.tuple(
+                Ingredient.PACKET_CODEC, EnchantingRecipe::tablet,
+                ItemStack.PACKET_CODEC, EnchantingRecipe::result,
+                EnchantingRecipe::new
+        );
 
         @Override
         public MapCodec<EnchantingRecipe> codec() {
@@ -73,7 +72,7 @@ public record EnchantingRecipe(Ingredient inputItem, ItemStack output) implement
 
         @Override
         public PacketCodec<RegistryByteBuf, EnchantingRecipe> packetCodec() {
-            return STREAM_CODEC;
+            return PACKET_CODEC;
         }
 
     }

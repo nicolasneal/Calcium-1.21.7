@@ -1,0 +1,7 @@
+{
+  "parent": "calcium:block/cube_column",
+  "textures": {
+    "end": "calcium:block/andesite_bricks",
+    "side": "calcium:block/slabs/andesite_bricks"
+  }
+}
