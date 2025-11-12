@@ -2,51 +2,23 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "bonus_rolls": 0.0,
+      "rolls": 1.0,
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "calcium:hide",
           "functions": [
             {
+              "function": "minecraft:set_count",
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
                 "min": 3.0,
                 "max": 4.0
-              },
-              "function": "minecraft:set_count"
+              }
             },
             {
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 1.0
-              },
-              "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
-            }
-          ],
-          "name": "calcium:hide"
-        }
-      ],
-      "rolls": 1.0
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 3.0,
-                "max": 4.0
-              },
-              "function": "minecraft:set_count"
-            },
-            {
+              "function": "minecraft:furnace_smelt",
               "conditions": [
                 {
                   "condition": "minecraft:any_of",
@@ -55,9 +27,7 @@
                       "condition": "minecraft:entity_properties",
                       "entity": "this",
                       "predicate": {
-                        "flags": {
-                          "is_on_fire": true
-                        }
+                        "flags": { "is_on_fire": true }
                       }
                     },
                     {
@@ -68,9 +38,7 @@
                           "mainhand": {
                             "predicates": {
                               "minecraft:enchantments": [
-                                {
-                                  "enchantments": "#minecraft:smelts_loot"
-                                }
+                                { "enchantments": "#minecraft:smelts_loot" }
                               ]
                             }
                           }
@@ -79,54 +47,111 @@
                     }
                   ]
                 }
-              ],
-              "function": "minecraft:furnace_smelt"
+              ]
             },
             {
+              "function": "minecraft:enchanted_count_increase",
+              "enchantment": "minecraft:looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
                 "max": 1.0
-              },
-              "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+              }
             }
-          ],
-          "name": "minecraft:beef"
+          ]
         }
-      ],
-      "rolls": 1.0
+      ]
     },
     {
-      "bonus_rolls": 0.0,
+      "rolls": 1.0,
       "entries": [
         {
           "type": "minecraft:item",
+          "name": "minecraft:beef",
           "functions": [
             {
+              "function": "minecraft:set_count",
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3.0,
+                "max": 4.0
+              }
+            },
+            {
+              "function": "minecraft:furnace_smelt",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
+                    {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "this",
+                      "predicate": {
+                        "flags": { "is_on_fire": true }
+                      }
+                    },
+                    {
+                      "condition": "minecraft:entity_properties",
+                      "entity": "direct_attacker",
+                      "predicate": {
+                        "equipment": {
+                          "mainhand": {
+                            "predicates": {
+                              "minecraft:enchantments": [
+                                { "enchantments": "#minecraft:smelts_loot" }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "function": "minecraft:enchanted_count_increase",
+              "enchantment": "minecraft:looting",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0.0,
+                "max": 1.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bone",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
                 "min": 1.0,
                 "max": 2.0
-              },
-              "function": "minecraft:set_count"
+              }
             },
             {
+              "function": "minecraft:enchanted_count_increase",
+              "enchantment": "minecraft:looting",
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
                 "max": 1.0
-              },
-              "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+              }
             }
-          ],
-          "name": "minecraft:bone"
+          ]
         }
-      ],
-      "rolls": 1.0
+      ]
     }
   ],
-  "random_sequence": "minecraft:entities/cow"
+  "random_sequence": "calcium:entities/cow"
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "calcium:stone",
+    "@": "minecraft:flint"
+  },
+  "pattern": [
+    "#@",
+    "@#"
+  ],
+  "result": {
+    "id": "minecraft:gravel",
+    "count": 1
+  }
+}

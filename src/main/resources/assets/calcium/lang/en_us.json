@@ -2,6 +2,7 @@
 
   "tooltip.calcium.enchanting_table_tablet": "Add Enchanting Tablet",
   "tooltip.calcium.enchanting_table_fuel": "Add Lapis Lazuli",
+  "item.calcium.enchanting_tablet": "Enchanting Tablet",
 
   "block.calcium.polished_stone": "Polished Stone",
   "block.calcium.andesite_bricks": "Andesite Bricks",
@@ -22,25 +23,31 @@
   "block.calcium.red_sandstone_brick_stairs": "Red Sandstone Brick Stairs",
   "block.calcium.cracked_red_sandstone_bricks": "Cracked Red Sandstone Bricks",
 
+  "block.calcium.busy_lizzie": "Busy Lizzie",
+  "block.calcium.pampas": "Pampas",
+  "block.calcium.goldenrod": "Goldenrod",
+
   "item.calcium.oak_timber": "Oak Timber",
+  "item.calcium.birch_timber": "Birch Timber",
   "item.calcium.oak_plank": "Oak Plank",
+  "item.calcium.birch_plank": "Birch Plank",
   "item.calcium.wooden_rod": "Wooden Rod",
   "item.calcium.stone": "Stone",
-  "item.calcium.bear": "Bear",
-  "item.calcium.calamari": "Calamari",
-  "item.calcium.camel": "Camel",
-  "item.calcium.cheval": "Cheval",
-  "item.calcium.chevon": "Chevon",
-  "item.calcium.cooked_bear": "Cooked Bear",
-  "item.calcium.cooked_camel": "Cooked Camel",
-  "item.calcium.cooked_cheval": "Cooked Cheval",
-  "item.calcium.cooked_chevon": "Cooked Chevon",
-  "item.calcium.cooked_frog": "Cooked Frog",
-  "item.calcium.frog": "Frog",
   "item.calcium.fur": "Fur",
   "item.calcium.hide": "Hide",
   "item.calcium.pixie_dust": "Pixie Dust",
+
+  "item.calcium.cheval": "Cheval",
+  "item.calcium.cooked_cheval": "Cooked Cheval",
+  "item.calcium.bear": "Bear",
+  "item.calcium.cooked_bear": "Cooked Bear",
+  "item.calcium.camel": "Camel",
+  "item.calcium.cooked_camel": "Cooked Camel",
+  "item.calcium.chevon": "Chevon",
+  "item.calcium.cooked_chevon": "Cooked Chevon",
+  "item.calcium.frog": "Frog",
+  "item.calcium.cooked_frog": "Cooked Frog",
   "item.calcium.squid": "Squid",
-  "item.calcium.enchanting_tablet": "Enchanting Tablet"
+  "item.calcium.calamari": "Calamari"
 
 }

@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -13,6 +14,9 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.nicolas.calcium.block.custom.BusyLizzie;
+import net.nicolas.calcium.block.custom.Goldenrod;
+import net.nicolas.calcium.block.custom.Pampas;
 
 import java.util.function.Function;
 
@@ -40,6 +44,11 @@ public class ModBlocks {
     public static final Block RED_SANDSTONE_BRICK_STAIRS = register("red_sandstone_brick_stairs", settings -> new StairsBlock(Blocks.CUT_RED_SANDSTONE.getDefaultState(), settings), Block.Settings.create().sounds(BlockSoundGroup.STONE).mapColor(MapColor.ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(0.8F, 0.8F), true);
     public static final Block CRACKED_RED_SANDSTONE_BRICKS = register("cracked_red_sandstone_bricks", Block::new, Block.Settings.create().sounds(BlockSoundGroup.STONE).mapColor(MapColor.ORANGE).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(0.8F, 0.8F), true);
 
+    // PLANT BLOCKS
+    public static final Block BUSY_LIZZIE = register("busy_lizzie", BusyLizzie::new, Block.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).nonOpaque(), true);
+    public static final Block PAMPAS = register("pampas", Pampas::new, Block.Settings.create().mapColor(MapColor.PALE_YELLOW).noCollision().breakInstantly().sounds(BlockSoundGroup.CROP).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY).nonOpaque(), true);
+    public static final Block GOLDENROD = register("goldenrod", Goldenrod::new, Block.Settings.create().mapColor(MapColor.YELLOW).noCollision().breakInstantly().sounds(BlockSoundGroup.CROP).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY).nonOpaque(), true);
+
 
     public static void initialize() {
 
@@ -62,6 +71,12 @@ public class ModBlocks {
             itemgroup.add(CRACKED_SANDSTONE_BRICKS);
             itemgroup.add(RED_SANDSTONE_BRICK_STAIRS);
             itemgroup.add(CRACKED_RED_SANDSTONE_BRICKS);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register((itemgroup) -> {
+            itemgroup.add(BUSY_LIZZIE);
+            itemgroup.add(PAMPAS);
+            itemgroup.add(GOLDENROD);
         });
 
     }

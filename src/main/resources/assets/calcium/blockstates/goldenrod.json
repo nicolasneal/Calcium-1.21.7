@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "calcium:block/goldenrod_bottom"
+    },
+    "half=upper": {
+      "model": "calcium:block/goldenrod_top"
+    }
+  }
+}

@@ -3,7 +3,6 @@
   "pools": [
     {
       "rolls": 1.0,
-      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
@@ -11,15 +10,7 @@
           "functions": [
             {
               "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 0.0,
-                "max": 1.0
-              }
-            },
-            {
-              "function": "minecraft:enchanted_count_increase",
-              "enchantment": "minecraft:looting",
+              "add": false,
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0.0,
@@ -31,5 +22,5 @@
       ]
     }
   ],
-  "random_sequence": "minecraft:entities/axolotl"
+  "random_sequence": "calcium:entities/axolotl"
 }
