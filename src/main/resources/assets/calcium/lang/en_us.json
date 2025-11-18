@@ -29,10 +29,25 @@
 
   "item.calcium.oak_timber": "Oak Timber",
   "item.calcium.birch_timber": "Birch Timber",
+  "item.calcium.spruce_timber": "Spruce Timber",
+  "item.calcium.jungle_timber": "Jungle Timber",
+  "item.calcium.acacia_timber": "Acacia Timber",
+  "item.calcium.dark_oak_timber": "Dark Oak Timber",
+  "item.calcium.mangrove_timber": "Mangrove Timber",
+  "item.calcium.cherry_timber": "Cherry Timber",
+  "item.calcium.pale_oak_timber": "Pale Oak Timber",
   "item.calcium.oak_plank": "Oak Plank",
   "item.calcium.birch_plank": "Birch Plank",
+  "item.calcium.spruce_plank": "Spruce Plank",
+  "item.calcium.jungle_plank": "Jungle Plank",
+  "item.calcium.acacia_plank": "Acacia Plank",
+  "item.calcium.dark_oak_plank": "Dark Oak Plank",
+  "item.calcium.mangrove_plank": "Mangrove Plank",
+  "item.calcium.cherry_plank": "Cherry Plank",
+  "item.calcium.pale_oak_plank": "Pale Oak Plank",
   "item.calcium.wooden_rod": "Wooden Rod",
   "item.calcium.stone": "Stone",
+  "item.calcium.glass": "Glass",
   "item.calcium.fur": "Fur",
   "item.calcium.hide": "Hide",
   "item.calcium.pixie_dust": "Pixie Dust",
@@ -48,6 +63,7 @@
   "item.calcium.frog": "Frog",
   "item.calcium.cooked_frog": "Cooked Frog",
   "item.calcium.squid": "Squid",
-  "item.calcium.calamari": "Calamari"
+  "item.calcium.calamari": "Calamari",
+  "item.calcium.water_bowl": "Water Bowl"
 
 }

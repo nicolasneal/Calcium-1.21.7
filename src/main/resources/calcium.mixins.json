@@ -3,6 +3,7 @@
   "package": "net.nicolas.calcium.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "attributes.Axolotl",
     "BedMixin",
     "CampfireMixin",
     "SignMixin",

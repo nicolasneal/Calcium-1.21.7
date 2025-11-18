@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "calcium:wooden_rod",
+    "@": "minecraft:copper_ingot",
+    "$": "minecraft:feather"
+  },
+  "pattern": [
+    "  $",
+    " @ ",
+    "#  "
+  ],
+  "result": {
+    "id": "minecraft:brush",
+    "count": 1
+  }
+}

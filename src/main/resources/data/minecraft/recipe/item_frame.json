@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "#calcium:plank",
+    "@": "minecraft:leather"
+  },
+  "pattern": [
+    "#@"
+  ],
+  "result": {
+    "id": "minecraft:item_frame",
+    "count": 1
+  }
+}

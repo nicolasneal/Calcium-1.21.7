@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "calcium:wooden_rod",
+    "@": "minecraft:string"
+  },
+  "pattern": [
+    "@# ",
+    "@ #",
+    "@# "
+  ],
+  "result": {
+    "id": "minecraft:bow",
+    "count": 1
+  }
+}

@@ -2,6 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
+      "rolls": 1.0,
       "conditions": [
         {
           "condition": "minecraft:match_tool",
@@ -15,8 +16,7 @@
           "type": "minecraft:item",
           "name": "minecraft:short_grass"
         }
-      ],
-      "rolls": 1.0
+      ]
     }
   ],
   "random_sequence": "minecraft:blocks/short_grass"

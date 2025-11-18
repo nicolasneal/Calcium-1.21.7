@@ -1,6 +1,13 @@
 {
   "values": [
     "calcium:oak_plank",
-    "calcium:birch_plank"
+    "calcium:birch_plank",
+    "calcium:spruce_plank",
+    "calcium:jungle_plank",
+    "calcium:acacia_plank",
+    "calcium:dark_oak_plank",
+    "calcium:mangrove_plank",
+    "calcium:cherry_plank",
+    "calcium:pale_oak_plank"
   ]
 }

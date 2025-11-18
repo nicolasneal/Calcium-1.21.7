@@ -1,6 +1,8 @@
 package net.nicolas.calcium.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ConsumableComponents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -10,6 +12,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
+
+import static net.minecraft.item.Items.BOWL;
 
 public class ModItems {
 
@@ -22,13 +26,27 @@ public class ModItems {
     // INGREDIENTS (RESOURCES)
     public static final Item OAK_TIMBER = register("oak_timber", Item::new, new Item.Settings().maxCount(64));
     public static final Item BIRCH_TIMBER = register("birch_timber", Item::new, new Item.Settings().maxCount(64));
+    public static final Item SPRUCE_TIMBER = register("spruce_timber", Item::new, new Item.Settings().maxCount(64));
+    public static final Item JUNGLE_TIMBER = register("jungle_timber", Item::new, new Item.Settings().maxCount(64));
+    public static final Item ACACIA_TIMBER = register("acacia_timber", Item::new, new Item.Settings().maxCount(64));
+    public static final Item DARK_OAK_TIMBER = register("dark_oak_timber", Item::new, new Item.Settings().maxCount(64));
+    public static final Item MANGROVE_TIMBER = register("mangrove_timber", Item::new, new Item.Settings().maxCount(64));
+    public static final Item CHERRY_TIMBER = register("cherry_timber", Item::new, new Item.Settings().maxCount(64));
+    public static final Item PALE_OAK_TIMBER = register("pale_oak_timber", Item::new, new Item.Settings().maxCount(64));
     public static final Item OAK_PLANK = register("oak_plank", Item::new, new Item.Settings().maxCount(64));
     public static final Item BIRCH_PLANK = register("birch_plank", Item::new, new Item.Settings().maxCount(64));
+    public static final Item SPRUCE_PLANK = register("spruce_plank", Item::new, new Item.Settings().maxCount(64));
+    public static final Item JUNGLE_PLANK = register("jungle_plank", Item::new, new Item.Settings().maxCount(64));
+    public static final Item ACACIA_PLANK = register("acacia_plank", Item::new, new Item.Settings().maxCount(64));
+    public static final Item DARK_OAK_PLANK = register("dark_oak_plank", Item::new, new Item.Settings().maxCount(64));
+    public static final Item MANGROVE_PLANK = register("mangrove_plank", Item::new, new Item.Settings().maxCount(64));
+    public static final Item CHERRY_PLANK = register("cherry_plank", Item::new, new Item.Settings().maxCount(64));
+    public static final Item PALE_OAK_PLANK = register("pale_oak_plank", Item::new, new Item.Settings().maxCount(64));
     public static final Item WOODEN_ROD = register("wooden_rod", Item::new, new Item.Settings().maxCount(64));
     public static final Item STONE = register("stone", Item::new, new Item.Settings().maxCount(64));
+    public static final Item GLASS = register("glass", Item::new, new Item.Settings().maxCount(64));
     // INGREDIENTS (UTILITY)
     public static final Item ENCHANTING_TABLET = register("enchanting_tablet", Item::new, new Item.Settings().maxCount(64));
-
     // FOOD AND DRINK (MOB DROPS)
     public static final Item CHEVAL = register("cheval", Item::new, new Item.Settings().maxCount(64).food(ModFoods.CHEVAL));
     public static final Item COOKED_CHEVAL = register("cooked_cheval", Item::new, new Item.Settings().maxCount(64).food(ModFoods.COOKED_CHEVAL));
@@ -42,6 +60,7 @@ public class ModItems {
     public static final Item COOKED_FROG = register("cooked_frog", Item::new, new Item.Settings().maxCount(64).food(ModFoods.COOKED_FROG));
     public static final Item SQUID = register("squid", Item::new, new Item.Settings().maxCount(64).food(ModFoods.SQUID));
     public static final Item CALAMARI = register("calamari", Item::new, new Item.Settings().maxCount(64).food(ModFoods.CALAMARI));
+    public static final Item WATER_BOWL = register("water_bowl", Item::new, new Item.Settings().maxCount(64).food(ModFoods.WATER_BOWL).component(DataComponentTypes.CONSUMABLE, ConsumableComponents.DRINK).useRemainder(BOWL));
 
     private static <T extends Item> T register(String name, Function<Item.Settings, T> constructor, Item.Settings settings) {
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name));
@@ -57,10 +76,25 @@ public class ModItems {
             itemgroup.add(PIXIE_DUST);
             itemgroup.add(OAK_TIMBER);
             itemgroup.add(BIRCH_TIMBER);
+            itemgroup.add(SPRUCE_TIMBER);
+            itemgroup.add(JUNGLE_TIMBER);
+            itemgroup.add(ACACIA_TIMBER);
+            itemgroup.add(DARK_OAK_TIMBER);
+            itemgroup.add(MANGROVE_TIMBER);
+            itemgroup.add(CHERRY_TIMBER);
+            itemgroup.add(PALE_OAK_TIMBER);
             itemgroup.add(OAK_PLANK);
             itemgroup.add(BIRCH_PLANK);
+            itemgroup.add(SPRUCE_PLANK);
+            itemgroup.add(JUNGLE_PLANK);
+            itemgroup.add(ACACIA_PLANK);
+            itemgroup.add(DARK_OAK_PLANK);
+            itemgroup.add(MANGROVE_PLANK);
+            itemgroup.add(CHERRY_PLANK);
+            itemgroup.add(PALE_OAK_PLANK);
             itemgroup.add(WOODEN_ROD);
             itemgroup.add(STONE);
+            itemgroup.add(GLASS);
             itemgroup.add(ENCHANTING_TABLET);
         });
 
@@ -77,6 +111,7 @@ public class ModItems {
             itemgroup.add(COOKED_FROG);
             itemgroup.add(SQUID);
             itemgroup.add(CALAMARI);
+            itemgroup.add(WATER_BOWL);
         });
 
     }

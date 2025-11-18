@@ -37,10 +37,14 @@ public class Calcium implements ModInitializer {
 
 		// Registering Items as Fuels
 		FuelRegistryEvents.BUILD.register((builder, context) -> {
-			builder.add(ModItems.PIXIE_DUST, 2400);
 			builder.add(ModItems.OAK_TIMBER, 300);
+			builder.add(ModItems.BIRCH_TIMBER, 300);
+			builder.add(ModItems.SPRUCE_TIMBER, 300);
 			builder.add(ModItems.OAK_PLANK, 300);
+			builder.add(ModItems.BIRCH_PLANK, 300);
+			builder.add(ModItems.SPRUCE_PLANK, 300);
 			builder.add(ModItems.WOODEN_ROD, 200);
+			builder.add(ModItems.PIXIE_DUST, 2400);
 		});
 
 		// Overriding Item Stack Sizes

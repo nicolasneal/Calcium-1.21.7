@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "calcium:wooden_rod",
+    "@": "minecraft:gold_ingot",
+    "$": "calcium:glass"
+  },
+  "pattern": [
+    "  $",
+    " @ ",
+    "#  "
+  ],
+  "result": {
+    "id": "minecraft:spyglass",
+    "count": 1
+  }
+}

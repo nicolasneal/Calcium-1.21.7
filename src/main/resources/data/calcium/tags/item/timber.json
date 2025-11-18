@@ -1,6 +1,13 @@
 {
   "values": [
     "calcium:oak_timber",
-    "calcium:birch_timber"
+    "calcium:birch_timber",
+    "calcium:spruce_timber",
+    "calcium:jungle_timber",
+    "calcium:acacia_timber",
+    "calcium:dark_oak_timber",
+    "calcium:mangrove_timber",
+    "calcium:cherry_timber",
+    "calcium:pale_oak_timber"
   ]
 }

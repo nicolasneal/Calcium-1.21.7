@@ -54,8 +54,8 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 3,
-                "max": 4
+                "min": 3.0,
+                "max": 4.0
               }
             },
             { "function": "minecraft:explosion_decay" }
@@ -92,8 +92,8 @@
               "function": "minecraft:set_count",
               "count": {
                 "type": "minecraft:uniform",
-                "min": 1,
-                "max": 2
+                "min": 1.0,
+                "max": 2.0
               }
             },
             {
